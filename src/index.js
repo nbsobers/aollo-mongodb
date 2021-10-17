@@ -10,6 +10,10 @@ import { PORT } from "../config/config";
 (async () => {
   // Required logic for integrating with Express
   const app = express();
+  app.get("/", (req, res) => {
+    res.json({ message: "Welcome Apollo mongodb." });
+});
+
   const httpServer = http.createServer(app);
 
   // Same ApolloServer initialization as before, plus the drain plugin.
