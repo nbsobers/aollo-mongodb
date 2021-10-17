@@ -1,0 +1,31 @@
+query {
+  getUsers {
+    id,
+    name
+  }
+}
+####################
+
+mutation {
+    createUser(input: { id:7, name:"sum"}) {
+      id,
+      name
+    }
+  }
+
+####################
+
+mutation createUser($input: UsersInput)
+{
+  createUser(input:$input) {
+    id,
+  }
+}
+
+{
+"input":{
+  "id":3,
+  "name":"sobs"
+}
+}
+#########################
