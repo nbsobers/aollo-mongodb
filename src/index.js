@@ -35,6 +35,6 @@ import { PORT } from "../config/config";
   });
 
   // Modified server startup
-  await new Promise((resolve) => httpServer.listen({ port: PORT }, resolve));
-  console.log(`🚀 Server ready at http://localhost:${PORT}${server.graphqlPath}`);
+  await new Promise((resolve) => httpServer.listen({ port: process.env.PORT || PORT }, resolve));
+  console.log(`🚀 Server ready at http://localhost:${process.env.PORT || PORT}${server.graphqlPath}`);
 })();
