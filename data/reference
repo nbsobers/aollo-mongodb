@@ -29,3 +29,14 @@ mutation createUser($input: UsersInput)
 }
 }
 #########################
+
+Postman ==> {
+    "id": 10
+}
+
+mutation createUser($id: ID){
+    createUser(input: { id: $id, name:"sum"}) {
+      id,
+      name
+    }
+  }

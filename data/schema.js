@@ -3,7 +3,8 @@ import { gql } from 'apollo-server-express';
 export const typeDefs = gql`
     type User{
        id:ID
-       name:String
+       name:String,
+       age: Int,
     }
     type Friend{
        id:ID
